@@ -1,0 +1,7 @@
+spring:
+    application:
+        name: credential-cache-service
+    config:
+        import: configserver:${CONFIG_SERVER_URL:http://localhost:8888}
+    profiles:
+        active: ${ENVIRONMENT:dev}
