@@ -1,0 +1,61 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# IDE
+.idea
+.vscode
+*.iml
+*.iws
+*.ipr
+
+# Maven build
+target/
+**/target/
+
+# Gradle
+.gradle/
+build/
+
+# Test and coverage
+surefire-reports/
+failsafe-reports/
+.coverage/
+.jacoco/
+
+# Logs
+*.log
+logs/
+
+# Local config and secrets
+.env
+.env.*
+!.env.example
+
+# OP System
+.DS_Store
+Thumbs.db
+
+# Documentation and notes
+README.md
+docs/
+
+# Docker Compose
+compose.yaml
+compose.yml
+docker-compose.yml
+docker-compose.yaml
+
+# Temp files
+tmp/
+temp/
+*.tmp
+*.swp
+
+# Certs and keys
+*.pem
+*.key
+*.p12
+*.jks
+secrets/

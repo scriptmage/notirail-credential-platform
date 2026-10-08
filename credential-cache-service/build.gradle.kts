@@ -16,6 +16,7 @@ dependencies {
     implementation("io.grpc:grpc-netty-shaded:1.84.0")
     implementation("io.grpc:grpc-protobuf:1.84.0")
     implementation("io.grpc:grpc-stub:1.84.0")
+    implementation("io.grpc:grpc-services:1.84.0")
 
     // Protobuf
     implementation("com.google.protobuf:protobuf-java:4.30.2")

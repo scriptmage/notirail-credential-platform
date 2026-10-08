@@ -1,8 +1,16 @@
 rootProject.name = "credential-platform"
 
-include("credential-service")
-include("credential-relay-service")
-include("credential-cache-service")
+if (file("credential-cache-service").isDirectory) {
+    include("credential-cache-service")
+}
+
+if (file("credential-relay-service").isDirectory) {
+    include("credential-relay-service")
+}
+
+if (file("credential-service").isDirectory) {
+    include("credential-service")
+}
 
 pluginManagement {
     repositories {

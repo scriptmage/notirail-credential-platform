@@ -31,11 +31,11 @@ subprojects {
         implementation("io.micrometer:micrometer-registry-prometheus")
 
 		// Lombok
-		compileOnly("org.projectlombok:lombok:1.18.44")
+		compileOnly("org.projectlombok:lombok")
 
-		annotationProcessor("org.projectlombok:lombok:1.18.44")
+		annotationProcessor("org.projectlombok:lombok")
 
-		testCompileOnly("org.projectlombok:lombok:1.18.44")
-		testAnnotationProcessor("org.projectlombok:lombok:1.18.44")
+		testCompileOnly("org.projectlombok:lombok")
+		testAnnotationProcessor("org.projectlombok:lombok")
 	}
 }
