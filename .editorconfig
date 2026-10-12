@@ -8,7 +8,7 @@ tab_width                   = 4
 indent_size                 = 4
 trim_trailing_whitespace    = true
 insert_final_newline        = true
-max_line_length             = 160
+max_line_length             = 180
 
 ij_continuation_indent_size = 4
 ij_formatter_off_tag        = @formatter:off
@@ -16,7 +16,7 @@ ij_formatter_on_tag         = @formatter:on
 ij_formatter_tags_enabled   = true
 ij_smart_tabs               = true
 ij_wrap_on_typing           = false
-ij_visual_guides            = 160
+ij_visual_guides            = 180
 
 ij_xml_align_attributes                 = false
 ij_xml_align_text                       = false

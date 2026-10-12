@@ -1,5 +1,9 @@
 rootProject.name = "credential-platform"
 
+if (file("credential-api").isDirectory) {
+    include("credential-api")
+}
+
 if (file("credential-cache-service").isDirectory) {
     include("credential-cache-service")
 }
