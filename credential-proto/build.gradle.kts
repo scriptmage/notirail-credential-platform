@@ -1,6 +1,7 @@
 plugins {
     java
     id("java-library")
+    id("maven-publish")
     id("com.google.protobuf") version "0.10.0"
 }
 
@@ -37,6 +38,25 @@ protobuf {
                     option("OmitReflectionServiceDescriptor")
                 }
             }
+        }
+    }
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/${System.getenv("GITHUB_REPOSITORY")}")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+
+    publications {
+        create<MavenPublication>("mavenJava") {
+            from(components["java"])
         }
     }
 }
