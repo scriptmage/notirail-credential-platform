@@ -8,17 +8,15 @@ group = "com.notirail"
 version = "0.0.1-SNAPSHOT"
 
 repositories {
-    mavenLocal()
     mavenCentral()
 }
 
 dependencies {
-    implementation("com.notirail:credential-api:0.0.1")
+    implementation(project(":credential-api"))
+    implementation(project(":credential-proto"))
 
-    implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-flyway")
-    implementation("org.springframework.boot:spring-boot-starter-validation")
     implementation("org.springframework.security:spring-security-crypto")
 
     implementation("org.flywaydb:flyway-core")

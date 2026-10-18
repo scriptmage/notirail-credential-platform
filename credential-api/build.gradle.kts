@@ -27,7 +27,6 @@ repositories {
 dependencies {
     implementation("jakarta.validation:jakarta.validation-api")
     implementation("io.swagger.core.v3:swagger-annotations-jakarta:2.2.39")
-
     implementation("com.fasterxml.jackson.core:jackson-databind:2.22.3")
 }
 
@@ -46,15 +45,17 @@ openApiGenerate {
     modelPackage.set("com.notirail.credential.api.model")
     invokerPackage.set("com.notirail.credential.api.invoker")
 
-    configOptions.set(mapOf(
-        "useSpringBoot3" to "true",
-        "interfaceOnly" to "true",
-        "useTags" to "true",
-        "useBeanValidation" to "true",
-        "openApiNullable" to "false",
-        "skipDefaultInterface" to "true",
-        "library" to "spring-boot"
-    ))
+    configOptions.set(
+        mapOf(
+            "useSpringBoot3" to "true",
+            "interfaceOnly" to "true",
+            "useTags" to "true",
+            "useBeanValidation" to "true",
+            "openApiNullable" to "false",
+            "skipDefaultInterface" to "true",
+            "library" to "spring-boot"
+        )
+    )
 }
 
 tasks.processResources {
