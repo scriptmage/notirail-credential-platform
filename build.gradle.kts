@@ -6,8 +6,6 @@ plugins {
 
 subprojects {
     plugins.apply("java")
-    plugins.apply("org.springframework.boot")
-    plugins.apply("io.spring.dependency-management")
 
     java {
         sourceCompatibility = JavaVersion.VERSION_25
