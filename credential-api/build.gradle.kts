@@ -25,7 +25,16 @@ repositories {
 }
 
 dependencies {
+    implementation(platform("org.springframework.boot:spring-boot-dependencies:4.1.1"))
+
+    implementation("jakarta.servlet:jakarta.servlet-api")
     implementation("jakarta.validation:jakarta.validation-api")
+    implementation("jakarta.annotation:jakarta.annotation-api")
+
+    implementation("org.springframework:spring-web")
+    implementation("org.springframework:spring-context")
+    implementation("org.springframework:spring-core")
+
     implementation("io.swagger.core.v3:swagger-annotations-jakarta:2.2.39")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.22.3")
 }

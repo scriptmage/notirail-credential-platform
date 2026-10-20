@@ -13,23 +13,29 @@ subprojects {
     }
 
     repositories {
+        mavenLocal()
         mavenCentral()
     }
 
     dependencies {
-        implementation("org.springframework.boot:spring-boot-starter-web")
-        implementation("org.springframework.boot:spring-boot-starter-actuator")
-        implementation("org.springframework.cloud:spring-cloud-config-client:5.0.5")
-        implementation("org.springframework.boot:spring-boot-starter-validation")
-        testImplementation("org.springframework.boot:spring-boot-starter-test")
+        compileOnly("org.projectlombok:lombok:1.18.42")
+        annotationProcessor("org.projectlombok:lombok:1.18.42")
 
-        implementation("io.micrometer:micrometer-core")
-        implementation("io.micrometer:micrometer-registry-prometheus")
+        testCompileOnly("org.projectlombok:lombok:1.18.42")
+        testAnnotationProcessor("org.projectlombok:lombok:1.18.42")
+    }
 
-        compileOnly("org.projectlombok:lombok")
-        annotationProcessor("org.projectlombok:lombok")
+    plugins.withId("org.springframework.boot") {
+        dependencies {
+            implementation("org.springframework.boot:spring-boot-starter-web")
+            implementation("org.springframework.boot:spring-boot-starter-actuator")
+            implementation("org.springframework.boot:spring-boot-starter-validation")
+            implementation("org.springframework.cloud:spring-cloud-config-client:5.0.5")
 
-        testCompileOnly("org.projectlombok:lombok")
-        testAnnotationProcessor("org.projectlombok:lombok")
+            testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+            implementation("io.micrometer:micrometer-core")
+            implementation("io.micrometer:micrometer-registry-prometheus")
+        }
     }
 }
